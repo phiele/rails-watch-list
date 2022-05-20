@@ -1,6 +1,7 @@
 <h1>Index lists</h1>
 <ul>
-  <%= @lists.each do |list| %>
+  <% @lists.each do |list| %>
     <li><%= list.name %></li>
+    <%= link_to "Show this list", list %>
   <% end %>
 </ul>

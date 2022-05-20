@@ -1,2 +1,11 @@
 <h1>Show list</h1>
-<p>Name: <%= @list.name%></p>
+<p><%= @list.name%></p>
+
+<p><strong>Bookmarks</strong></p>
+<ul class="list-group">
+  <% @list.bookmarks.each do |bookmark| %>
+    <li class="list-group-item"><%= bookmark.comment %></li>
+  <% end %>
+</ul>
+<br>
+<%= link_to "Back to all lists", lists_path %>
